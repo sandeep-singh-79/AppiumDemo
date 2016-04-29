@@ -15,7 +15,7 @@ public class ApplyFiltersToMobileSearchResultsTest extends BaseTest {
         this.mainPage = new PermissionDialogPage(driver)
                 .allow()
                 .clickExistingUser()
-                .enterCredentials("leouragan@googlemail.com", "WPVwAwy9")
+                .enterCredentials(EMAIL, PASSWORD)
                 .submitLogin();
     }
 
