@@ -32,4 +32,12 @@ public class PermissionDialogPage extends BasePage {
 
         return new ExistingUserPage(driver);
     }
+
+    public ResultsPage allowLocation() {
+        wait.until(ExpectedConditions.elementToBeClickable(allowBtn));
+
+        ((MobileElement) driver.findElement(allowBtn)).tap(1, 1);
+
+        return new ResultsPage(driver);
+    }
 }

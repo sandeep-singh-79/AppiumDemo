@@ -28,7 +28,7 @@ public class MobilesPage extends BasePage {
     }
 
 
-    public ResultsPage selectBrandAndSubmit() {
+    public PermissionDialogPage selectBrandAndSubmit() {
         // first scroll to the checkbox
         driver.scrollToExact("Samsung");
 
@@ -36,6 +36,6 @@ public class MobilesPage extends BasePage {
 
         driver.findElement(btnFindMobile).click();
 
-        return new ResultsPage(driver);
+        return new PermissionDialogPage(driver);
     }
 }

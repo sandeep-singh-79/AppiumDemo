@@ -29,6 +29,9 @@ public class ApplyFiltersToMobileSearchResultsTest extends BaseTest {
         ResultsPage resultsPage = mainPage
                 .displayHamburgerMenu()
                 .mobilesClick()
-                .selectBrandAndSubmit();
+                .selectBrandAndSubmit()
+                .allowLocation();
+
+        //resultsPage.clickFilter().applyRamFilter();
     }
 }

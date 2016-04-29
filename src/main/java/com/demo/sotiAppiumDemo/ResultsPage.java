@@ -1,6 +1,7 @@
 package com.demo.sotiAppiumDemo;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
 /**
@@ -12,20 +13,18 @@ public class ResultsPage extends BasePage {
 
     public ResultsPage(AppiumDriver driver) {
         super(driver);
+
+        btnFilter = By.id("com.flipkart.android:id/filter_image");
     }
 
     @Override
     protected By getUniqueElement() {
-        btnFilter = By.id("com.flipkart.android:id/filter_button");
-
-        driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button"))
-                .click();
-
-        return btnFilter;
+        return By.xpath("//android.widget.TextView[@text='FILTERS']");
     }
 
-    public void clickFilter() {
-        driver.findElement(btnFilter).click();
+    public FilterPage clickFilter() {
+        ((MobileElement) driver.findElement(btnFilter)).tap(1, 1);
 
+        return new FilterPage(driver);
     }
 }
