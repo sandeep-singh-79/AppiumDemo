@@ -22,6 +22,7 @@ public abstract class BaseTest {
     private static final String SELENIUM_HOST = "localhost";
     private static final int SELENIUM_PORT = 4723;
     private static final String UDID = "HT4AJJT00196";
+    private static final String DEVICE_NAME = "Nexus_9";
     protected static AppiumDriver driver;
     private PLATFORM platform = PLATFORM.ANDROID;
 
@@ -60,7 +61,7 @@ public abstract class BaseTest {
         desiredCaps.setCapability("device", "Android");
         //mandatory capabilities
         // deviceName capability is currently ignored for Android
-        desiredCaps.setCapability("deviceName", "Nexus_9");
+        desiredCaps.setCapability("deviceName", DEVICE_NAME);
         desiredCaps.setCapability("platformName", "Android");
         desiredCaps.setCapability("udid", UDID);
         // wait for 120 secs for the device to be ready to accept commands
