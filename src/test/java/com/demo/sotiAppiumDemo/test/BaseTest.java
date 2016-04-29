@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class BaseTest {
 
     protected static final String EMAIL = "leouragan@googlemail.com";
-    protected static final String PASSWORD = "WPVwAwy9";
+    protected static final String PASSWORD = "test1234";
     private static final String SELENIUM_HOST = "localhost";
     private static final int SELENIUM_PORT = 4723;
     private static final String UDID = "HT4AJJT00196";
